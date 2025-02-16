@@ -6,4 +6,4 @@ sprite_size = [16, 16]
 sprite_counts = [12, 11]
 [[map]]
 # ldtk = "level1.ldtk"
-ldtk = "map2.tmx"
+ldtk = "test0.tmx"

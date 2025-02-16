@@ -1,0 +1,31 @@
+{
+    "automappingRulesFile": "",
+    "commands": [
+    ],
+    "compatibilityVersion": 1100,
+    "extensionsPath": "extensions",
+    "folders": [
+        "."
+    ],
+    "properties": [
+    ],
+    "propertyTypes": [
+        {
+            "id": 10,
+            "name": "P8SpriteFlags",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "red",
+                "orange",
+                "yellow",
+                "green",
+                "blue",
+                "purple",
+                "pink",
+                "peach"
+            ],
+            "valuesAsFlags": true
+        }
+    ]
+}

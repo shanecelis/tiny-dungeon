@@ -20,10 +20,11 @@ function _update()
 end
 
 function _draw()
-    -- cls(3)
+    cls(3)
     if not m then
         m = map(0, 0, 0, 0, 0, 0, nil, 0):retain()
+        m:name("hi")
     end
     -- pset(x + 10,x, 2)
-    -- spr(176, x, y)
+    spr(84, x, y)
 end
