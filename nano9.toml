@@ -1,9 +1,12 @@
 template = "pico8"
 code = "main.lua"
 [[sprite_sheet]]
-path = "tilemap_packed.png"
-sprite_size = [16, 16]
-sprite_counts = [12, 11]
+path = "tilemap_packed.tsx"
+# path = "tilemap_packed.png"
+# sprite_size = [16, 16]
+# sprite_counts = [12, 11]
 [[map]]
 # ldtk = "level1.ldtk"
-ldtk = "test0.tmx"
+ldtk = "outside.tmx"
+[[map]]
+ldtk = "inside.tmx"

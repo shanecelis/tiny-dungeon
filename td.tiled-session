@@ -1,5 +1,5 @@
 {
-    "activeFile": "",
+    "activeFile": "tilemap_packed.tsx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -8,20 +8,22 @@
             "scale": 2.7490624999999995,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 64.02182562237127,
+                "x": 64.02182562237128,
                 "y": 79.8454018415369
             }
         },
         "tilemap_packed.tsx": {
             "scaleInDock": 1,
-            "scaleInEditor": 1
+            "scaleInEditor": 2
         }
     },
-    "last.objectTypesPath": "/Users/shane/Projects/nano-9/p8-sprite-flags.json",
+    "last.objectTypesPath": "/Users/shane/Projects/nano-9/export-types.json",
     "openFiles": [
+        "test0.tmx",
+        "tilemap_packed.tsx"
     ],
     "project": "td.tiled-project",
-    "property.type": "oflags",
+    "property.type": "int",
     "recentFiles": [
         "test0.tmx",
         "tilemap_packed.tsx"
