@@ -169,7 +169,11 @@
  </tile>
  <tile id="46" type="tile"/>
  <tile id="47" type="tile"/>
- <tile id="48" type="tile"/>
+ <tile id="48" type="tile">
+  <properties>
+   <property name="block" type="bool" value="false"/>
+  </properties>
+ </tile>
  <tile id="49" type="tile"/>
  <tile id="50" type="tile"/>
  <tile id="51" type="tile"/>

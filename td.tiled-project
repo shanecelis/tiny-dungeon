@@ -130,6 +130,36 @@
             ]
         },
         {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 11,
+            "members": [
+                {
+                    "name": "content",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "is_mimic",
+                    "type": "bool",
+                    "value": false
+                }
+            ],
+            "name": "chest",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
+            ]
+        },
+        {
             "color": "#ff000000",
             "drawFill": true,
             "id": 7,

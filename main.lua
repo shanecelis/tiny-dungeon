@@ -1,11 +1,12 @@
-world.info("Lua: The main.lua script just got loaded")
-
+-- main.lua
 room = 0
 x = 0
 y = 0
 speed = 2
+dir_y = 0
+dir_x = 0
+reach = 1
 function _init()
-    world.info("what")
     if m == nil then
         m = map(0, 0, 0, 0, 0, 0, nil, room):retain()
     end
@@ -21,28 +22,48 @@ function _update()
                               top_left_x - d, bottom_right_y) then
         x = x - speed
         end
-        y = y + grid_align(y)
+        dir_x = -1
+        dir_y = 0
     end
     if btn(1) then
         if not is_wall(bottom_right_x + d, bottom_right_y,
                               bottom_right_x + d, top_left_y) then
         x = x + speed
         end
-        y = y + grid_align(y)
+        dir_x = 1
+        dir_y = 0
     end
     if btn(2) then
         if not is_wall(top_left_x, top_left_y - d,
                               bottom_right_x, top_left_y - d) then
             y = y - speed
         end
-        x = x + grid_align(x)
+        dir_y = -1
+        dir_x = 0
     end
     if btn(3) then
         if not is_wall(bottom_right_x, bottom_right_y + d,
                               top_left_x, bottom_right_y + d) then
         y = y + speed
         end
-        x = x + grid_align(x)
+        dir_y = 1
+        dir_x = 0
+    end
+    if btn(5) then
+        local props = mgetp(x / 16 + 0.5 + reach * dir_x, y / 16 + 0.5 + reach * dir_y, room, 1)
+        if props then
+            world.info("props "..dump(props))
+        end
+    end
+    -- Only grid align if we're moving in a single direction.
+    if abs(dir_y) ~ abs(dir_x) == 1 then
+        if dir_y ~= 0 then
+            x = x + grid_align(x)
+            dir_x = 0
+        else
+            y = y + grid_align(y)
+            dir_y = 0
+        end
     end
     if is_door(x, y) then
         m:despawn()
@@ -59,10 +80,10 @@ function d_mget(cx,cy,map_index)
 end
 
 function is_wall(cx, cy, ...)
-    local arg = {...}
-    local r = fgets(d_mget(cx, cy, room), 0)
-    for i = 1, #arg, 2 do
-        r = r or fgets(mget(arg[i], arg[i + 1], room), 0)
+    local args = {...}
+    local r = fgets(mget(cx, cy, room), 0)
+    for i = 1, #args, 2 do
+        r = r or fgets(mget(args[i], args[i + 1], room), 0)
     end
     return r
 end
@@ -95,6 +116,19 @@ function grid_align(a)
     else
         return -1
     end
+end
+
+function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
 end
 
 
