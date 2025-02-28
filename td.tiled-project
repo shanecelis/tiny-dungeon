@@ -143,6 +143,21 @@
                     "name": "is_mimic",
                     "type": "bool",
                     "value": false
+                },
+                {
+                    "name": "is_open",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "kind",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "p8flags",
+                    "type": "int",
+                    "value": 1
                 }
             ],
             "name": "chest",

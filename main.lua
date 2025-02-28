@@ -6,16 +6,18 @@ speed = 2
 dir_y = 0
 dir_x = 0
 reach = 1
+player_size = 15
+player_adjust = (16 - player_size) / 16
 function _init()
     if m == nil then
         m = map(0, 0, 0, 0, 0, 0, nil, room):retain()
     end
 end
 function _update()
-    top_left_x = x / 16
-    top_left_y = y / 16
-    bottom_right_x = (x + 15) / 16
-    bottom_right_y = (y + 15) / 16
+    top_left_x = x / 16 + player_adjust
+    top_left_y = y / 16 + player_adjust
+    bottom_right_x = (x + 15) / 16 - player_adjust
+    bottom_right_y = (y + 15) / 16 - player_adjust
     d = 1 / 16
     if btn(0) then
         if not is_wall(top_left_x - d, top_left_y,
@@ -49,10 +51,19 @@ function _update()
         dir_y = 1
         dir_x = 0
     end
+    -- interact with something?
     if btn(5) then
-        local props = mgetp(x / 16 + 0.5 + reach * dir_x, y / 16 + 0.5 + reach * dir_y, room, 1)
+        local cx = x / 16 + 0.5 + reach * dir_x
+        local cy = y / 16 + 0.5 + reach * dir_y
+        local props = mgetp(cx, cy, room, 1)
         if props then
             world.info("props "..dump(props))
+            if props.class == "chest" then
+                -- if not props.is_open then
+                    -- We only do something if it's not open.
+                    mset(cx, cy, 91, room, 1)
+                -- end
+            end
         end
     end
     -- Only grid align if we're moving in a single direction.
@@ -81,9 +92,9 @@ end
 
 function is_wall(cx, cy, ...)
     local args = {...}
-    local r = fgets(mget(cx, cy, room), 0)
+    local r = fget(mget(cx, cy, room, 0), 0) or fget(mget(cx, cy, room, 1), 0)
     for i = 1, #args, 2 do
-        r = r or fgets(mget(args[i], args[i + 1], room), 0)
+        r = r or fget(mget(args[i], args[i + 1], room, 0), 0) or fget(mget(args[i], args[i + 1], room, 1), 0)
     end
     return r
 end
@@ -100,7 +111,7 @@ end
 
 function is_door(x, y)
     -- Check the center of the sprite.
-    local sprite = mget((x + 8) / 16, (y + 8) / 16, room)[1]
+    local sprite = mget((x + 8) / 16, (y + 8) / 16, room, 0) or mget((x + 8) / 16, (y + 8) / 16, room, 1)
     if sprite == nil then
         return false
     end
@@ -122,7 +133,7 @@ function dump(o)
    if type(o) == 'table' then
       local s = '{ '
       for k,v in pairs(o) do
-         if type(k) ~= 'number' then k = '"'..k..'"' end
+         if type(k) ~= 'number' then k = '\''..k..'\'' end
          s = s .. '['..k..'] = ' .. dump(v) .. ','
       end
       return s .. '} '
