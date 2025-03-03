@@ -9,13 +9,14 @@
  <objectgroup id="2" name="objects">
   <object id="1" type="chest" gid="90" x="32" y="48" width="16" height="16">
    <properties>
-    <property name="content" value="potion"/>
+    <property name="content" value="sword"/>
     <property name="is_mimic" type="bool" value="true"/>
     <property name="p8flags" type="int" value="1"/>
    </properties>
   </object>
   <object id="2" type="chest" gid="90" x="48" y="48" width="16" height="16">
    <properties>
+    <property name="content" value="potion"/>
     <property name="p8flags" type="int" value="1"/>
    </properties>
   </object>

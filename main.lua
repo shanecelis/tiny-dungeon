@@ -146,5 +146,6 @@ end
 function _draw()
     cls(3)
     -- pset(x + 10,x, 2)
-    spr(84, x, y)
+    -- spr(84, x, y)
+    spr(99, x, y)
 end

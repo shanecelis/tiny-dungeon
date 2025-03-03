@@ -175,6 +175,36 @@
             ]
         },
         {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 12,
+            "members": [
+                {
+                    "name": "damage",
+                    "type": "int",
+                    "value": 0
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "item",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
+            ]
+        },
+        {
             "color": "#ff000000",
             "drawFill": true,
             "id": 7,
