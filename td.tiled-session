@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "inside.tmx",
+    "activeFile": "tilemap_packed.tsx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -45,8 +45,8 @@
     "project": "td.tiled-project",
     "property.type": "int",
     "recentFiles": [
-        "tilemap_packed.tsx",
         "inside.tmx",
+        "tilemap_packed.tsx",
         "test0.tmx"
     ]
 }

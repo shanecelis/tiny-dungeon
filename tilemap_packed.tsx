@@ -252,11 +252,21 @@
  <tile id="100" type="tile"/>
  <tile id="101" type="tile"/>
  <tile id="102" type="tile"/>
- <tile id="103" type="tile"/>
+ <tile id="103" type="item">
+  <properties>
+   <property name="damage" type="int" value="3"/>
+   <property name="name" value="dagger"/>
+  </properties>
+ </tile>
  <tile id="104" type="tile"/>
  <tile id="105" type="tile"/>
  <tile id="106" type="tile"/>
- <tile id="107" type="tile"/>
+ <tile id="107" type="item">
+  <properties>
+   <property name="damage" type="int" value="1"/>
+   <property name="name" value="cardboard sword"/>
+  </properties>
+ </tile>
  <tile id="108" type="tile"/>
  <tile id="109" type="tile"/>
  <tile id="110" type="tile"/>
