@@ -2,7 +2,7 @@
 --
 -- # BUGS
 -- - object sizes are only a tile wide
-room = 0
+room = 2
 x = 64
 y = 64
 speed = 2

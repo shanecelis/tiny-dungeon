@@ -76,19 +76,25 @@
             "scaleInDock": 1
         },
         "Lillys house inside.tmx": {
+            "expandedObjectLayers": [
+                4
+            ],
             "scale": 3.78,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 88.62433862433863,
-                "y": 55.82010582010583
+                "x": 67.46031746031747,
+                "y": 104.23280423280426
             }
         },
         "Lillys house outside.tmx": {
-            "scale": 2.560546875,
-            "selectedLayer": 0,
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 2.56,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 71.07856598016781,
-                "y": 94.90160183066362
+                "x": 71.09375,
+                "y": 94.921875
             }
         },
         "black smith inside town.tmx": {
@@ -120,8 +126,8 @@
             "scale": 2.06,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 151.94174757281553,
-                "y": 80.09708737864078
+                "x": 105.8252427184466,
+                "y": 207.76699029126215
             }
         },
         "path to town.tmx": {

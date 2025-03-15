@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="5">
  <tileset firstgid="1" source="tiny-town-tilemap.tsx"/>
+ <tileset firstgid="133" source="tilemap_packed.tsx"/>
  <layer id="1" name="ground" width="8" height="8">
   <data encoding="base64" compression="zlib">
    eJxjZGBgYCSAmZDYzESoJwYzU8lMJgrMAOkFACa4AEw=
   </data>
  </layer>
+ <objectgroup id="4" name="objects">
+  <object id="2" name="entrance" x="64" y="32.7656" width="16" height="16">
+   <properties>
+    <property name="goto_level" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="4" name="player_start" x="72.2656" y="59.375">
+   <point/>
+  </object>
+ </objectgroup>
  <layer id="3" name="Trees" width="8" height="8">
   <data encoding="base64" compression="zlib">
    eJxjYMANWPHIgYAgmfoGC5ADYgAWTAA6
