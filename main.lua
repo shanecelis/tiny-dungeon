@@ -35,7 +35,12 @@ function goto_room(room_num)
         map_offset = { x = 0, y = 0 }
     end
     m = map(0, 0, -map_offset.x, -map_offset.y, 0, 0, nil, room):retain(0.1)
-    world.warn("made map")
+    local props = mgetp("player_start", room, 1)
+    if props and props.x and props.y then
+        -- x = props.x
+        -- y = props.y
+    end
+    world.info("changed room to "..room)
 end
 
 function _init()
@@ -88,7 +93,7 @@ function _update()
     if btn(5) then
         local cx = cx + 0.5 + reach * dir_x
         local cy = cy + 0.5 + reach * dir_y
-        local props = mgetp(cx, cy, room, 1)
+        local props = mgetp({cx, cy}, room, 1)
         if props then
             world.info("props " .. dump(props))
             if props.class == "chest" then
@@ -111,7 +116,7 @@ function _update()
     end
 
     -- check for exit tile
-    local props = mgetp(cx, cy, room, 1)
+    local props = mgetp({cx, cy}, room, 1)
     if props and props.goto_level then
         goto_room(props.goto_level)
         -- world.info("we at a door")

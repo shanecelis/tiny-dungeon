@@ -13,7 +13,7 @@
     <property name="goto_level" type="int" value="2"/>
    </properties>
   </object>
-  <object id="4" name="player_start" x="72.2656" y="59.375">
+  <object id="4" name="player_start" x="67.9687" y="51.5625">
    <point/>
   </object>
  </objectgroup>
