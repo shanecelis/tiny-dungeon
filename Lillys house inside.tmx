@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="8" height="9" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="8">
+ <tileset firstgid="1" source="tilemap_packed.tsx"/>
+ <tileset firstgid="133" source="rogue-like-indoors.tsx"/>
+ <layer id="1" name="Ground" width="8" height="9">
+  <data encoding="base64" compression="zlib">
+   eJwzZGBgMBzBmBAAAMIJDEE=
+  </data>
+ </layer>
+ <objectgroup id="4" name="Objects">
+  <object id="7" x="47.8836" y="128.307" width="31.4815" height="14.5503">
+   <properties>
+    <property name="goto_level" type="int" value="3"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="2" name="Furniture" width="8" height="9">
+  <data encoding="base64" compression="zlib">
+   eJxbycDA0AvEyUwMGIAXixglYDEQL6GukSQBLaB/dEj0EwDOYgNM
+  </data>
+ </layer>
+</map>

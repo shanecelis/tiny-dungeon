@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
+ <tileset firstgid="1" source="tiny-town-tilemap.tsx"/>
+ <layer id="1" name="ground" width="8" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYCSAmZDYzESoJwYzU8lMJgrMAOkFACa4AEw=
+  </data>
+ </layer>
+ <layer id="3" name="Trees" width="8" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYMANWPHIgYAgmfoGC5ADYgAWTAA6
+  </data>
+ </layer>
+ <layer id="2" name="Buildings" width="8" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYIAAQyA2AmJjIDZhwAS2QGwHxPZA7IBF3hOIvYA4DIh9sMjDgDYeORDQICCvRUBek0T9AKTOA8o=
+  </data>
+ </layer>
+</map>
