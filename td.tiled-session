@@ -82,19 +82,16 @@
             "scale": 3.78,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 67.46031746031748,
-                "y": 104.23280423280423
+                "x": 57.936507936507944,
+                "y": 82.2751322751323
             }
         },
         "Lillys house outside.tmx": {
-            "expandedObjectLayers": [
-                4
-            ],
             "scale": 2.56,
-            "selectedLayer": 1,
+            "selectedLayer": -1,
             "viewCenter": {
-                "x": 72.265625,
-                "y": 59.375
+                "x": 71.875,
+                "y": 55.859375
             }
         },
         "black smith inside town.tmx": {
@@ -115,8 +112,8 @@
             "scale": 3.78515625,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 63.93395252837976,
-                "y": 63.93395252837976
+                "x": 63.93395252837977,
+                "y": 119.94220846233227
             }
         },
         "outside.tmx": {
@@ -126,16 +123,16 @@
             "scale": 2.06,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 80.0970873786408,
-                "y": 80.09708737864082
+                "x": 105.8252427184466,
+                "y": 207.76699029126215
             }
         },
         "path to town.tmx": {
-            "scale": 3.78515625,
+            "scale": 3.78,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 63.93395252837977,
-                "y": 81.10629514963878
+                "x": 64.02116402116403,
+                "y": 81.21693121693123
             }
         },
         "path.tmx": {
@@ -144,6 +141,26 @@
             "viewCenter": {
                 "x": 61.90476190476191,
                 "y": 84.3915343915344
+            }
+        },
+        "rogue-like-indoors.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 3.31
+        },
+        "table.tmx": {
+            "scale": 3.78515625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 63.93395252837977,
+                "y": 63.93395252837978
+            }
+        },
+        "table2.tmx": {
+            "scale": 3.78515625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 63.93395252837977,
+                "y": 63.93395252837978
             }
         },
         "test0.tmx": {
@@ -168,7 +185,7 @@
     "last.objectTypesPath": "/Users/shane/Projects/nano-9/export-types.json",
     "map.height": 8,
     "map.lastUsedFormat": "tmx",
-    "map.layerDataFormat": "3",
+    "map.layerDataFormat": "5",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
     "map.width": 8,
@@ -182,6 +199,9 @@
     "project": "td.tiled-project",
     "property.type": "int",
     "recentFiles": [
+        "rogue-like-indoors.tsx",
+        "table.tmx",
+        "table2.tmx",
         "tilemap_packed.tsx",
         "outside.tmx",
         "inside.tmx",

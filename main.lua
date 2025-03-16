@@ -2,7 +2,7 @@
 --
 -- # BUGS
 -- - object sizes are only a tile wide
-room = 2
+room = 0
 x = 64
 y = 64
 speed = 2
@@ -12,6 +12,7 @@ reach = 1
 player_size = 15
 player_adjust = (16 - player_size) / 16
 map_offset = { x = 0, y = 0 }
+modal = false
 
 -- function on_script_loaded()
 --     if _init then
@@ -37,8 +38,8 @@ function goto_room(room_num)
     m = map(0, 0, -map_offset.x, -map_offset.y, 0, 0, nil, room):retain(0.1)
     local props = mgetp("player_start", room, 1)
     if props and props.x and props.y then
-        -- x = props.x
-        -- y = props.y
+        x = flr(props.x)
+        y = flr(props.y) - 16
     end
     world.info("changed room to "..room)
 end
@@ -49,6 +50,12 @@ function _init()
 end
 
 function _update()
+    if modal then
+        if btnp() then
+            modal = false
+        end
+        return
+    end
     top_left_x, top_left_y = pos_to_cell(x, y)
     top_left_x = top_left_x + player_adjust
     top_left_y = top_left_y + player_adjust
@@ -101,6 +108,10 @@ function _update()
                 -- We only do something if it's not open.
                 mset(cx, cy, 91, room, 1)
                 -- end
+                rectfill(5, 64, 123, 123)
+
+                print("You got "..(props.content or "nothing"), 10, 68, 0)
+                modal = true
             end
         end
     end
@@ -119,7 +130,7 @@ function _update()
     local props = mgetp({cx, cy}, room, 1)
     if props and props.goto_level then
         goto_room(props.goto_level)
-        -- world.info("we at a door")
+        world.info("we at a door")
     end
     -- if is_door(x, y) then
     --     m:despawn()
@@ -137,13 +148,13 @@ function d_mget(cx, cy, map_index)
 end
 
 function is_wall(cx, cy, ...)
-    return false
-    -- local args = { ... }
-    -- local r = fget(mget(cx, cy, room, 0), 0) or fget(mget(cx, cy, room, 1), 0)
-    -- for i = 1, #args, 2 do
-    --     r = r or fget(mget(args[i], args[i + 1], room, 0), 0) or fget(mget(args[i], args[i + 1], room, 1), 0)
-    -- end
-    -- return r
+    -- return false
+    local args = { ... }
+    local r = fget(mget(cx, cy, room, 0), 0) or fget(mget(cx, cy, room, 1), 0)
+    for i = 1, #args, 2 do
+        r = r or fget(mget(args[i], args[i + 1], room, 0), 0) or fget(mget(args[i], args[i + 1], room, 1), 0)
+    end
+    return r
 end
 
 function fgets(list, index)
@@ -191,8 +202,18 @@ function dump(o)
 end
 
 function _draw()
-    cls()
+    if not modal then
+        cls()
+    end
     -- pset(x + 10,x, 2)
     -- spr(84, x, y)
-    spr(99, x, y)
+    local s = 99 -- sprite index
+    if dir_y < 0 then
+        s = {1, -- sprite sheet
+             1  -- sprite index
+        }
+    end
+
+    spr(s, x, y, 1, 1, dir_x < 0)
+
 end
