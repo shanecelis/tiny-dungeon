@@ -88,10 +88,10 @@
         },
         "Lillys house outside.tmx": {
             "scale": 2.56,
-            "selectedLayer": -1,
+            "selectedLayer": 1,
             "viewCenter": {
                 "x": 71.875,
-                "y": 55.859375
+                "y": 87.890625
             }
         },
         "black smith inside town.tmx": {
@@ -112,8 +112,8 @@
             "scale": 3.78515625,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 63.93395252837977,
-                "y": 119.94220846233227
+                "x": 38.30753353973168,
+                "y": 154.02270381836945
             }
         },
         "outside.tmx": {
@@ -123,8 +123,8 @@
             "scale": 2.06,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 105.8252427184466,
-                "y": 207.76699029126215
+                "x": 151.94174757281553,
+                "y": 80.09708737864078
             }
         },
         "path to town.tmx": {

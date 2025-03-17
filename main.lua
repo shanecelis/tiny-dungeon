@@ -5,7 +5,7 @@
 room = 0
 x = 64
 y = 64
-speed = 2
+speed = 1
 dir_y = 0
 dir_x = 0
 reach = 1
@@ -50,6 +50,9 @@ function _init()
 end
 
 function _update()
+    if btnp() then
+        world.info("btnp")
+    end
     if modal then
         if btnp() then
             modal = false
@@ -95,9 +98,9 @@ function _update()
         dir_y = 1
         dir_x = 0
     end
-    local cx, cy = pos_to_cell(x, y)
+    local cx, cy = pos_to_cell(x + 8 , y + 8 )
     -- interact with something?
-    if btn(5) then
+    if btnp(5) then
         local cx = cx + 0.5 + reach * dir_x
         local cy = cy + 0.5 + reach * dir_y
         local props = mgetp({cx, cy}, room, 1)

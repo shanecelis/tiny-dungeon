@@ -17,7 +17,7 @@
   </object>
   <object id="5" name="east exit" x="144.66" y="18.4466" width="14.5631" height="123.301">
    <properties>
-    <property name="goto_level" type="int" value="1"/>
+    <property name="goto_level" type="int" value="3"/>
    </properties>
   </object>
  </objectgroup>
