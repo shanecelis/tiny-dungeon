@@ -42,7 +42,11 @@
     <property name="p8flags" type="int" value="1"/>
    </properties>
   </object>
-  <object id="7" name="table" gid="73" x="32" y="80" width="16" height="16"/>
+  <object id="7" name="table" gid="73" x="32" y="80" width="16" height="16">
+   <properties>
+    <property name="p8flags" type="int" value="1"/>
+   </properties>
+  </object>
   <object id="8" gid="74" x="48" y="80" width="16" height="16"/>
   <object id="9" gid="74" x="32" y="96" width="16" height="16"/>
   <object id="21" name="exit" x="47.8184" y="112.281" width="32.2312" height="15.323">

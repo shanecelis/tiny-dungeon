@@ -16,5 +16,5 @@ ldtk = "Lillys house inside.tmx"
 ldtk = "Lillys house outside.tmx"
 [[map]] # 4
 ldtk = "black smith inside town.tmx"
-[[map]] # 5
-ldtk = "table2.tmx"
+# [[map]] # 5
+# ldtk = "table2.tmx"
