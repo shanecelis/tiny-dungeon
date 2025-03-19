@@ -7,7 +7,7 @@ path = "custom2.png"
 sprite_size = [16, 16]
 sprite_counts = [3, 1]
 [[map]] # 0
-ldtk = "outside.tmx"
+ldtk = "outside-2.tmx"
 [[map]] # 1
 ldtk = "inside.tmx"
 [[map]] # 2

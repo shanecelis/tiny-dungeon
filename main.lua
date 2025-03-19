@@ -30,16 +30,12 @@ function goto_room(room_num)
         m:despawn()
     end
     room = room_num
-    if room == 0 then
-        map_offset = { x = 16, y = 16 }
-    else
-        map_offset = { x = 0, y = 0 }
-    end
     m = map(0, 0, -map_offset.x, -map_offset.y, 0, 0, nil, room):retain(0.1)
     local props = mgetp("player_start", room, 1)
     if props and props.x and props.y then
-        x = flr(props.x)
-        y = flr(props.y) - 16
+        x = flr(props.x) - map_offset.x
+        y = flr(props.y) - 16 - map_offset.y
+        -- y = flr(props.y)
     end
     world.info("changed room to "..room)
 end
@@ -109,6 +105,7 @@ function _update()
             if props.class == "chest" then
                 -- if not props.is_open then
                 -- We only do something if it's not open.
+                world.info("cx "..cx.." cy "..cy)
                 mset(cx, cy, 91, room, 1)
                 -- end
                 rectfill(5, 64, 123, 123)
@@ -135,13 +132,6 @@ function _update()
         goto_room(props.goto_level)
         world.info("we at a door")
     end
-    -- if is_door(x, y) then
-    --     m:despawn()
-    --     room = 1
-    --     m = map(0, 0, 0, 0, 0, 0, nil, room):retain(0.1)
-    --     map_offset = { x = 0, y = 0 }
-    --     world.info("we at a door")
-    -- end
 end
 
 function d_mget(cx, cy, map_index)
@@ -150,34 +140,28 @@ function d_mget(cx, cy, map_index)
     return r
 end
 
+function is_block(r)
+    if r and r.p8flags then
+        return r.p8flags == 1
+    elseif r and r.block then
+        return r.block == 1
+    else
+        return false
+    end
+end
+
 function is_wall(cx, cy, ...)
     -- return false
     local args = { ... }
-    local r = fget(mget(cx, cy, room, 0), 0) or fget(mget(cx, cy, room, 1), 0)
-    for i = 1, #args, 2 do
-        r = r or fget(mget(args[i], args[i + 1], room, 0), 0) or fget(mget(args[i], args[i + 1], room, 1), 0)
+    if is_block(mgetp({cx, cy}, room, 0)) or is_block(mgetp({cx, cy}, room, 1)) then
+        return true
     end
-    return r
-end
-
-function fgets(list, index)
-    local r = false;
-    for sprite in all(list) do
-        if sprite ~= nil then
-            r = r or fget(sprite, index)
+    for i = 1, #args, 2 do
+        if is_block(mgetp({args[i], args[i + 1]}, room, 0)) or is_block(mgetp({args[i], args[i + 1]}, room, 1)) then
+            return true
         end
     end
-    return r
-end
-
-function is_door(x, y)
-    -- Check the center of the sprite.
-    local cx, cy = pos_to_cell(x + 8, y + 8)
-    local sprite = mget(cx, cy, room, 0) or mget(cx, cy, room, 1)
-    if sprite == nil then
-        return false
-    end
-    return fget(sprite, 1)
+    return false
 end
 
 function grid_align(a)

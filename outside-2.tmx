@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="8" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="18">
+ <tileset firstgid="1" source="tilemap_packed.tsx"/>
+ <layer id="1" name="dungeon" width="8" height="8">
+  <data encoding="base64" compression="zlib">
+   eJwzZGBgMKQCZgViaSBmwyEvAMSMQMyHQ14QiJmBWAiHvBUQ6wGxDZXcC8MAfj8LBA==
+  </data>
+ </layer>
+ <objectgroup id="2" name="objects">
+  <object id="1" name="map_offset" x="16" y="16">
+   <point/>
+  </object>
+  <object id="3" name="door" x="48" y="80" width="16" height="16">
+   <properties>
+    <property name="goto_level" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="9" name="player_start" gid="100" x="47.8252" y="114.796" width="16" height="16" visible="0"/>
+  <object id="11" x="0" y="-16" width="128" height="16">
+   <properties>
+    <property name="block" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="12" x="128" y="0" width="16" height="128">
+   <properties>
+    <property name="block" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="13" x="-16" y="0" width="16" height="128">
+   <properties>
+    <property name="block" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="15" x="0" y="128" width="128" height="16">
+   <properties>
+    <property name="block" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="16" x="-66.5049" y="10.1942" height="0.485437"/>
+ </objectgroup>
+</map>

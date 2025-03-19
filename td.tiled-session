@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Lillys house outside.tmx",
+    "activeFile": "outside.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -82,8 +82,8 @@
             "scale": 3.78,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 67.46031746031748,
-                "y": 104.23280423280423
+                "x": 64.02116402116404,
+                "y": 71.95767195767195
             }
         },
         "Lillys house outside.tmx": {
@@ -93,8 +93,8 @@
             "scale": 2.56,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 72.265625,
-                "y": 59.375
+                "x": 64.0625,
+                "y": 64.0625
             }
         },
         "black smith inside town.tmx": {
@@ -112,11 +112,22 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 3.78515625,
+            "scale": 3.78,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 38.30753353973168,
-                "y": 154.02270381836945
+                "x": 64.02116402116404,
+                "y": 119.84126984126985
+            }
+        },
+        "outside-2.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 2.06,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 64.07766990291265,
+                "y": -7.766990291262118
             }
         },
         "outside.tmx": {
@@ -126,8 +137,8 @@
             "scale": 2.06,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 80.0970873786408,
-                "y": 80.09708737864082
+                "x": 16.019417475728176,
+                "y": 16.019417475728176
             }
         },
         "path to town.tmx": {
@@ -145,6 +156,9 @@
                 "x": 61.90476190476191,
                 "y": 84.3915343915344
             }
+        },
+        "rogue-like-indoors.tsx": {
+            "scaleInDock": 1
         },
         "test0.tmx": {
             "scale": 2.74,
@@ -177,19 +191,18 @@
         "outside.tmx",
         "inside.tmx",
         "tiny-town-tilemap.tsx",
-        "Lillys house outside.tmx"
+        "Lillys house outside.tmx",
+        "Lillys house inside.tmx"
     ],
     "project": "td.tiled-project",
     "property.type": "int",
     "recentFiles": [
-        "rogue-like-indoors.tsx",
-        "table.tmx",
-        "table2.tmx",
         "tilemap_packed.tsx",
-        "outside.tmx",
-        "inside.tmx",
-        "tiny-town-tilemap.tsx",
+        "Lillys house inside.tmx",
         "Lillys house outside.tmx",
+        "tiny-town-tilemap.tsx",
+        "inside.tmx",
+        "outside.tmx",
         "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilemaps/Lillys house.tmx",
         "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilemaps/Beginning Fields.tmx",
         "test0.tmx"
