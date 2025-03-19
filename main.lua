@@ -11,7 +11,6 @@ dir_x = 0
 reach = 1
 player_size = 15
 player_adjust = (16 - player_size) / 16
-map_offset = { x = 0, y = 0 }
 modal = false
 
 -- function on_script_loaded()
@@ -22,7 +21,7 @@ modal = false
 
 -- position to map cell
 function pos_to_cell(x, y)
-    return (x + map_offset.x) / 16, (y + map_offset.y) / 16
+    return x / 16, y / 16
 end
 
 function goto_room(room_num)
@@ -30,11 +29,11 @@ function goto_room(room_num)
         m:despawn()
     end
     room = room_num
-    m = map(0, 0, -map_offset.x, -map_offset.y, 0, 0, nil, room):retain(0.1)
+    m = map(0, 0, 0, 0, 0, 0, nil, room):retain(0.1)
     local props = mgetp("player_start", room, 1)
     if props and props.x and props.y then
-        x = flr(props.x) - map_offset.x
-        y = flr(props.y) - 16 - map_offset.y
+        x = flr(props.x)
+        y = flr(props.y) - 16
         -- y = flr(props.y)
     end
     world.info("changed room to "..room)
