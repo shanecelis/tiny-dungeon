@@ -45,9 +45,6 @@ function _init()
 end
 
 function _update()
-    if btnp() then
-        world.info("btnp")
-    end
     if modal then
         if btnp() then
             modal = false
@@ -93,6 +90,11 @@ function _update()
         dir_y = 1
         dir_x = 0
     end
+    local ids = ray(x,y)
+    if #ids > 0 then
+        world.info("ray "..dump(ids))
+    end
+
     local cx, cy = pos_to_cell(x + 8 , y + 8 )
     -- interact with something?
     if btnp(5) then
