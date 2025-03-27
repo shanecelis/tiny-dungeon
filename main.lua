@@ -91,31 +91,31 @@ function _update()
         dir_x = 0
     end
     local ids = ray(x,y)
-    if #ids > 0 then
-        world.info("ray "..dump(ids))
+    if #ids > 0 and btnp(4) then
+        world.info("ray "..dump(ids).." "..dump(props(ids[1])))
     end
 
     local cx, cy = pos_to_cell(x + 8 , y + 8 )
     -- interact with something?
-    if btnp(5) then
-        local cx = cx + 0.5 + reach * dir_x
-        local cy = cy + 0.5 + reach * dir_y
-        local props = mgetp({cx, cy}, room, 1)
-        if props then
-            world.info("props " .. dump(props))
-            if props.class == "chest" then
-                -- if not props.is_open then
-                -- We only do something if it's not open.
-                world.info("cx "..cx.." cy "..cy)
-                mset(cx, cy, 91, room, 1)
-                -- end
-                rectfill(5, 64, 123, 123)
+    -- if btnp(5) then
+    --     local cx = cx + 0.5 + reach * dir_x
+    --     local cy = cy + 0.5 + reach * dir_y
+    --     local props = mgetp({cx, cy}, room, 1)
+    --     if props then
+    --         -- world.info("props " .. dump(props))
+    --         if props.class == "chest" then
+    --             -- if not props.is_open then
+    --             -- We only do something if it's not open.
+    --             world.info("cx "..cx.." cy "..cy)
+    --             mset(cx, cy, 91, room, 1)
+    --             -- end
+    --             rectfill(5, 64, 123, 123)
 
-                print("You got "..(props.content or "nothing"), 10, 68, 0)
-                modal = true
-            end
-        end
-    end
+    --             print("You got "..(props.content or "nothing"), 10, 68, 0)
+    --             modal = true
+    --         end
+    --     end
+    -- end
     -- Only grid align if we're moving in a single direction.
     if abs(dir_y) ~ abs(dir_x) == 1 then
         if dir_y ~= 0 then
@@ -142,13 +142,14 @@ function d_mget(cx, cy, map_index)
 end
 
 function is_block(r)
-    if r and r.p8flags then
-        return r.p8flags == 1
-    elseif r and r.block then
-        return r.block == 1
-    else
-        return false
-    end
+    return false
+    -- if r and r.p8flags then
+    --     return r.p8flags == 1
+    -- elseif r and r.block then
+    --     return r.block == 1
+    -- else
+    --     return false
+    -- end
 end
 
 function is_wall(cx, cy, ...)

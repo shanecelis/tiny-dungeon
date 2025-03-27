@@ -7,9 +7,6 @@
   </data>
  </layer>
  <objectgroup id="2" name="objects">
-  <object id="1" name="map_offset" x="16" y="16">
-   <point/>
-  </object>
   <object id="3" name="door" x="48" y="80" width="16" height="16">
    <properties>
     <property name="goto_level" type="int" value="1"/>

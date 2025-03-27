@@ -140,6 +140,11 @@
                     "value": ""
                 },
                 {
+                    "name": "flags",
+                    "type": "int",
+                    "value": 0
+                },
+                {
                     "name": "is_mimic",
                     "type": "bool",
                     "value": false
@@ -153,11 +158,6 @@
                     "name": "kind",
                     "type": "string",
                     "value": ""
-                },
-                {
-                    "name": "p8flags",
-                    "type": "int",
-                    "value": 1
                 }
             ],
             "name": "chest",

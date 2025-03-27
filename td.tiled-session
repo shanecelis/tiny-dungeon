@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "outside.tmx",
+    "activeFile": "inside.tmx",
     "expandedProjectPaths": [
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -83,7 +83,7 @@
             "selectedLayer": 1,
             "viewCenter": {
                 "x": 64.02116402116404,
-                "y": 71.95767195767195
+                "y": 71.95767195767196
             }
         },
         "Lillys house outside.tmx": {
@@ -115,8 +115,8 @@
             "scale": 3.78,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 64.02116402116404,
-                "y": 119.84126984126985
+                "x": 24.074074074074076,
+                "y": 56.08465608465609
             }
         },
         "outside-2.tmx": {
@@ -188,16 +188,17 @@
     "map.width": 8,
     "openFiles": [
         "tilemap_packed.tsx",
-        "outside.tmx",
         "inside.tmx",
         "tiny-town-tilemap.tsx",
         "Lillys house outside.tmx",
-        "Lillys house inside.tmx"
+        "Lillys house inside.tmx",
+        "outside-2.tmx"
     ],
     "project": "td.tiled-project",
     "property.type": "int",
     "recentFiles": [
         "tilemap_packed.tsx",
+        "outside-2.tmx",
         "Lillys house inside.tmx",
         "Lillys house outside.tmx",
         "tiny-town-tilemap.tsx",
