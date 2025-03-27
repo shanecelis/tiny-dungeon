@@ -93,8 +93,8 @@
             "scale": 2.56,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 64.0625,
-                "y": 64.0625
+                "x": 66.40625,
+                "y": 66.40625
             }
         },
         "black smith inside town.tmx": {
@@ -180,6 +180,12 @@
     "last.externalTilesetPath": "/Users/shane/Projects/nano-9/tiny-dungeon",
     "last.imagePath": "/Users/shane/Projects/nano-9/tiny-dungeon",
     "last.objectTypesPath": "/Users/shane/Projects/nano-9/export-types.json",
+    "last.worldFilePath": "/Users/shane/Projects/nano-9/tiny-dungeon",
+    "loadedWorlds": [
+        "/Users/shane/Projects/nano-9/tiny-dungeon/over-world.world",
+        "/Users/shane/Projects/nano-9/tiny-dungeon/over-world.world",
+        "/Users/shane/Projects/bevy_ecs_tiled/assets/worlds/orthogonal.world"
+    ],
     "map.height": 8,
     "map.lastUsedFormat": "tmx",
     "map.layerDataFormat": "5",
@@ -197,12 +203,12 @@
     "project": "td.tiled-project",
     "property.type": "int",
     "recentFiles": [
+        "inside.tmx",
         "tilemap_packed.tsx",
         "outside-2.tmx",
         "Lillys house inside.tmx",
         "Lillys house outside.tmx",
         "tiny-town-tilemap.tsx",
-        "inside.tmx",
         "outside.tmx",
         "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilemaps/Lillys house.tmx",
         "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilemaps/Beginning Fields.tmx",

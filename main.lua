@@ -25,23 +25,25 @@ function pos_to_cell(x, y)
 end
 
 function goto_room(room_num)
-    if m ~= nil then
-        m:despawn()
-    end
-    room = room_num
-    m = map(0, 0, 0, 0, 0, 0, nil, room):retain(0.1)
-    local props = mgetp("player_start", room, 1)
-    if props and props.x and props.y then
-        x = flr(props.x)
-        y = flr(props.y) - 16
-        -- y = flr(props.y)
-    end
-    world.info("changed room to "..room)
+    return
+    -- if m ~= nil then
+    --     m:despawn()
+    -- end
+    -- room = room_num
+    -- m = map(0, 0, 0, 0, 0, 0, nil, room):retain(0.1)
+    -- local props = mgetp("player_start", room, 1)
+    -- if props and props.x and props.y then
+    --     x = flr(props.x)
+    --     y = flr(props.y) - 16
+    --     -- y = flr(props.y)
+    -- end
+    -- world.info("changed room to "..room)
 end
 
 function _init()
     world.info("init")
-    goto_room(room)
+    m = map(0, 0, 0, 0, 0, 0, nil, room):retain(0.1)
+    -- goto_room(room)
 end
 
 function _update()
@@ -133,6 +135,7 @@ function _update()
         goto_room(props.goto_level)
         world.info("we at a door")
     end
+    camera(x - 64,y - 64)
 end
 
 function d_mget(cx, cy, map_index)
