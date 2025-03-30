@@ -1,0 +1,57 @@
+{
+ "patterns": [
+        {
+            "regexp": ".*x(\\d+)-y(\\d+)\\.tmx",
+            "multiplierX": 128,
+            "multiplierY": 128,
+            "offsetX": 0,
+            "offsetY": 0
+        }
+    ],
+ "maps": [
+        {
+            "fileName": "Lillys house inside.tmx",
+            "x": 0,
+            "y": -256,
+            "width": 128,
+            "height": 128
+        },
+        {
+            "fileName": "inside.tmx",
+            "x": 128,
+            "y": -256,
+            "width": 128,
+            "height": 128
+        },
+        {
+            "fileName": "Lillys house outside.tmx",
+            "x": 0,
+            "y": 0,
+            "width": 128,
+            "height": 128
+        },
+        {
+            "fileName": "outside-2.tmx",
+            "x": 0,
+            "y": 128,
+            "width": 128,
+            "height": 128
+        },
+        {
+            "fileName": "blank.tmx",
+            "x": 0,
+            "y": 256,
+            "width": 128,
+            "height": 128
+        },
+        {
+            "fileName": "blank.tmx",
+            "x": 128,
+            "y": 128,
+            "width": 128,
+            "height": 128
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "type": "world"
+}

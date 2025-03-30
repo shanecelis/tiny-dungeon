@@ -13,9 +13,6 @@
     <property name="goto_level" type="int" value="3"/>
    </properties>
   </object>
-  <object id="8" name="player_start" x="55.5555" y="109.26">
-   <point/>
-  </object>
  </objectgroup>
  <layer id="2" name="Furniture" width="8" height="9">
   <data encoding="base64" compression="zlib">

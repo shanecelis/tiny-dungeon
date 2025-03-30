@@ -1,0 +1,20 @@
+{
+ "maps": [
+        {
+            "fileName": "Lillys house outside.tmx",
+            "x": 0,
+            "y": 0,
+            "width": 128,
+            "height": 128
+        },
+        {
+            "fileName": "outside-2.tmx",
+            "x": 0,
+            "y": 128,
+            "width": 128,
+            "height": 128
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "type": "world"
+}

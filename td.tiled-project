@@ -142,7 +142,7 @@
                 {
                     "name": "flags",
                     "type": "int",
-                    "value": 0
+                    "value": 1
                 },
                 {
                     "name": "is_mimic",
@@ -161,6 +161,33 @@
                 }
             ],
             "name": "chest",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 15,
+            "members": [
+                {
+                    "name": "position",
+                    "propertyType": "vec2",
+                    "type": "class",
+                    "value": {
+                    }
+                }
+            ],
+            "name": "goto",
             "type": "class",
             "useAs": [
                 "property",
@@ -233,6 +260,36 @@
                 }
             ],
             "name": "tile",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 14,
+            "members": [
+                {
+                    "name": "x",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "y",
+                    "type": "float",
+                    "value": 0
+                }
+            ],
+            "name": "vec2",
             "type": "class",
             "useAs": [
                 "property",
