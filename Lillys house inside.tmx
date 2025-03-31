@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="8" height="9" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="10">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="8" height="9" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="11">
  <tileset firstgid="1" source="tilemap_packed.tsx"/>
  <tileset firstgid="133" source="rogue-like-indoors.tsx"/>
  <layer id="1" name="Ground" width="8" height="9">
@@ -10,7 +10,13 @@
  <objectgroup id="4" name="Objects">
   <object id="7" name="exit" x="47.8836" y="128.307" width="31.4815" height="14.5503">
    <properties>
-    <property name="goto_level" type="int" value="3"/>
+    <property name="flags" type="int" value="2"/>
+    <property name="goto_place" value="lillys-house-outside"/>
+   </properties>
+  </object>
+  <object id="10" gid="100" x="55.5795" y="124.091" width="16" height="16" visible="0">
+   <properties>
+    <property name="place" value="lillys-house-inside"/>
    </properties>
   </object>
  </objectgroup>
