@@ -26,13 +26,18 @@ function _init()
 end
 
 function _update()
+    -- BUG: If camera isn't called, the tilemap goes away. I DON'T GET IT.
+    local qx = x/128
+    local qy = y/128
+    camera(128 * flr(qx),128 * flr(qy))
+
     if modal then
         if btnp() then
             modal = false
         end
         return
     end
-    local dx, dy = 0, 0
+    dx, dy = 0, 0
     if btn(0) then
         dx = -1
     end
@@ -80,16 +85,17 @@ function _update()
     -- interact with something?
     if btnp(5) then
         for id in all(raydown(x, y, 4, player_reach)) do
+            world.info("check id "..id)
             local p = props(id)
-            if p and p.class == "chest" then
-            end
-        end
-
-        local p = {}
+            if not opened_chests[id] and p and p.class == "chest" then
                 cx, cy = camera()
                 rectfill(cx + 5, cy + 100, cx + 123, cy + 123)
                 print("You got "..(p.content or "nothing"), cx + 10, cy + 104, 0)
                 modal = true
+                opened_chests[id] = true
+                break
+            end
+        end
     end
     --     local cx = cx + 0.5 + reach * dx
     --     local cy = cy + 0.5 + reach * dy
@@ -117,16 +123,6 @@ function _update()
     --         y = y + grid_align(y)
     --     end
     -- end
-
-    -- check for exit tile
-    -- local props = mgetp({cx, cy}, room, 1)
-    -- if props and props.goto_level then
-    --     goto_room(props.goto_level)
-    --     world.info("we at a door")
-    -- end
-    local qx = x/128
-    local qy = y/128
-    camera(128 * flr(qx),128 * flr(qy))
 end
 
 function min_dist(list)
@@ -169,11 +165,10 @@ function dump(o)
 end
 
 function _draw()
-    if not modal then
-        cls()
-    else
+    if modal then
         return
     end
+    cls()
     -- pset(x + 10,x, 2)
     -- spr(84, x, y)
     local s = 99 -- sprite index
