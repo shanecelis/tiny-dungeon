@@ -3,12 +3,14 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "inside.tmx",
     "expandedProjectPaths": [
-        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
         "/Users/Projects/nano-9/tiny-dungeon/tiny-town-tilemap.tsx": {
             "scaleInDock": 1
         },
@@ -76,38 +78,37 @@
         "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Tilesets_Road.tsx": {
             "scaleInDock": 1
         },
-        "/Users/shane/Projects/bevy_ecs_tiled/assets/maps/orthogonal/finite.tmx": {
-            "scale": 1.5140624999999999,
-            "selectedLayer": 3,
-            "viewCenter": {
-                "x": 159.83488132094948,
-                "y": 184.27244582043346
-            }
-        },
         "/Users/shane/Projects/bevy_ecs_tiled/assets/tiles/orthogonal_1.tsx": {
-            "dynamicWrapping": true,
             "scaleInDock": 1
+        },
+        "/Users/shane/Projects/bevy_ecs_tiled/assets/worlds/orthogonal/world_map001.tmx": {
+            "scale": 2.1838867187499997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 255.9656575593615,
+                "y": 208.80203908241293
+            }
         },
         "Lillys house inside.tmx": {
             "expandedObjectLayers": [
                 4
             ],
-            "scale": 3.8849,
+            "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 66.41097582949368,
-                "y": 117.3775386753842
+                "x": 63.75,
+                "y": 72
             }
         },
         "Lillys house outside.tmx": {
             "expandedObjectLayers": [
                 4
             ],
-            "scale": 0.3493,
+            "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 22.90294875465213,
-                "y": -37.21729172630978
+                "x": 63.75,
+                "y": 64
             }
         },
         "black smith inside town.tmx": {
@@ -121,26 +122,34 @@
                 "y": 24.074074074074076
             }
         },
+        "blank.tmx": {
+            "scale": 8.735546874999999,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 63.99141438984037,
+                "y": 63.99141438984037
+            }
+        },
         "inside.tmx": {
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 3.78,
+            "scale": 8,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 85.18518518518519,
-                "y": 91.26984126984128
+                "x": 78.9375,
+                "y": 79.875
             }
         },
         "outside-2.tmx": {
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 0.3493,
+            "scale": 2,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 22.90294875465213,
-                "y": -166.0463784712282
+                "x": 63.75,
+                "y": 64
             }
         },
         "outside.tmx": {
@@ -150,16 +159,16 @@
             "scale": 2.06,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 151.94174757281553,
-                "y": 80.09708737864078
+                "x": 16.019417475728176,
+                "y": 16.019417475728176
             }
         },
         "path to town.tmx": {
-            "scale": 3.78,
+            "scale": 3.78515625,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 64.02116402116403,
-                "y": 81.21693121693123
+                "x": 63.93395252837977,
+                "y": 81.10629514963878
             }
         },
         "path.tmx": {
@@ -171,25 +180,7 @@
             }
         },
         "rogue-like-indoors.tsx": {
-            "dynamicWrapping": false,
-            "scaleInDock": 1,
-            "scaleInEditor": 3.31
-        },
-        "table.tmx": {
-            "scale": 3.78515625,
-            "selectedLayer": 0,
-            "viewCenter": {
-                "x": 63.93395252837977,
-                "y": 63.93395252837978
-            }
-        },
-        "table2.tmx": {
-            "scale": 3.78515625,
-            "selectedLayer": 0,
-            "viewCenter": {
-                "x": 63.93395252837977,
-                "y": 63.93395252837978
-            }
+            "scaleInDock": 1
         },
         "test0.tmx": {
             "scale": 2.74,
@@ -200,12 +191,12 @@
             }
         },
         "tilemap_packed.tsx": {
-            "scaleInDock": 1,
-            "scaleInEditor": 3.31
+            "scaleInDock": 2,
+            "scaleInEditor": 1
         },
         "tiny-town-tilemap.tsx": {
             "scaleInDock": 1,
-            "scaleInEditor": 3.31
+            "scaleInEditor": 1
         }
     },
     "last.externalTilesetPath": "/Users/shane/Projects/nano-9/tiny-dungeon",
@@ -224,22 +215,28 @@
     "map.tileWidth": 16,
     "map.width": 8,
     "openFiles": [
+        "tilemap_packed.tsx",
+        "tiny-town-tilemap.tsx",
+        "Lillys house inside.tmx",
+        "outside-2.tmx",
+        "Lillys house outside.tmx",
+        "inside.tmx"
     ],
     "project": "td.tiled-project",
     "property.type": "string",
     "recentFiles": [
         "tilemap_packed.tsx",
-        "outside.tmx",
-        "inside.tmx",
         "tiny-town-tilemap.tsx",
-        "Lillys house outside.tmx",
         "Lillys house inside.tmx",
-        "path to town.tmx",
-        "path.tmx",
-        "black smith inside town.tmx",
         "outside-2.tmx",
-        "/Users/shane/Projects/bevy_ecs_tiled/assets/maps/orthogonal/finite.tmx",
-        "rogue-like-indoors.tsx"
+        "Lillys house outside.tmx",
+        "inside.tmx",
+        "blank.tmx",
+        "/Users/shane/Projects/bevy_ecs_tiled/assets/worlds/orthogonal/world_map001.tmx",
+        "outside.tmx",
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilemaps/Lillys house.tmx",
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilemaps/Beginning Fields.tmx",
+        "test0.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.spacing": 1,

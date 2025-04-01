@@ -10,10 +10,12 @@ dy = 0
 dx = 0
 reach = 1
 modal = false
+t = 0
 player_shape = { 2, -14,
                  14, -2 }
 player_reach = { -2, -18,
                  18, 2 }
+attack_time = -30
 -- function on_script_loaded()
 --     if _init then
 --         _init()
@@ -91,11 +93,15 @@ function _update()
                 cx, cy = camera()
                 rectfill(cx + 5, cy + 100, cx + 123, cy + 123)
                 print("You got "..(p.content or "nothing"), cx + 10, cy + 104, 0)
+                sset(id, 91)
                 modal = true
                 opened_chests[id] = true
                 break
             end
         end
+    end
+    if btnp(4) then
+        attack_time = t
     end
     --     local cx = cx + 0.5 + reach * dx
     --     local cy = cy + 0.5 + reach * dy
@@ -123,6 +129,7 @@ function _update()
     --         y = y + grid_align(y)
     --     end
     -- end
+    t = t + 1
 end
 
 function min_dist(list)
@@ -177,7 +184,11 @@ function _draw()
              1  -- sprite index
         }
     end
-
     spr(s, x, y, 1, 1, dx < 0)
+    local attack_frame = t - attack_time
+    if attack_frame < 8 then
+        spr(103, x + dx * attack_frame, y + dy * attack_frame)
+    end
+
 
 end
