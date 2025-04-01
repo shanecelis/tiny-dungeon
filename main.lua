@@ -74,8 +74,8 @@ function _update()
         if p and p.goto_place then
             local v = place(p.goto_place)
             if v then
-                x = v[1]
-                y = v[2] - 16
+                x = flr(v[1])
+                y = flr(v[2] - 16)
             end
         else
             world.info("p "..dump(p))
@@ -122,13 +122,13 @@ function _update()
     --     end
     -- end
     -- Only grid align if we're moving in a single direction.
-    -- if xor(dy == 0, dx == 0) then
-    --     if dy ~= 0 then
-    --         x = x + grid_align(x)
-    --     else
-    --         y = y + grid_align(y)
-    --     end
-    -- end
+    if xor(dy == 0, dx == 0) then
+        if dy ~= 0 then
+            x = x + grid_align(x)
+        else
+            y = y + grid_align(y)
+        end
+    end
     t = t + 1
 end
 
