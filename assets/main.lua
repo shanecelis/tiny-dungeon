@@ -28,7 +28,10 @@ attack_time = -30
 opened_chests = {}
 function _init()
     world.info("init")
-    m = map(0, 0, 0, 0, 0, 0, nil, room):retain(0.1)
+    -- BUG: Calling init twice!
+    if m == nil then
+        m = map(0, 0, 0, 0, 0, 0, nil, room):retain(0.1)
+    end
 end
 
 function _update()

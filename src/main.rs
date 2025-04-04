@@ -23,6 +23,7 @@ use std::{
 
 #[derive(Resource)]
 struct InitState(Handle<Pico8State>);
+
 fn main() -> io::Result<()> {
     let content = include_str!("../assets/Nano9.toml");
     let config: Config = toml::from_str::<Config>(&content)
@@ -44,7 +45,7 @@ fn main() -> io::Result<()> {
             for id in &cameras {
                 commands.entity(id)
                         .insert(OldTvSettings {
-                            screen_shape_factor: 0.05,
+                            screen_shape_factor: 0.0,
                             rows: 128.0,
                             brightness: 4.0,
                             edges_transition_size: 0.025,

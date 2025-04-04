@@ -135,11 +135,11 @@
             "expandedObjectLayers": [
                 2
             ],
-            "scale": 0.3493,
+            "scale": 2.4111,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 22.90294875465213,
-                "y": -166.0463784712282
+                "x": 165.06988511467796,
+                "y": -281.19945253203934
             }
         },
         "outside.tmx": {
@@ -210,11 +210,10 @@
     "last.externalTilesetPath": "/Users/shane/Projects/nano-9/tiny-dungeon",
     "last.imagePath": "/Users/shane/Projects/nano-9/tiny-dungeon",
     "last.objectTypesPath": "/Users/shane/Projects/nano-9/export-types.json",
-    "last.worldFilePath": "/Users/shane/Projects/nano-9/tiny-dungeon",
+    "last.worldFilePath": "/Users/shane/Projects/nano-9/tiny-dungeon/assets",
     "loadedWorlds": [
-        "/Users/shane/Projects/nano-9/tiny-dungeon/over-world.world",
         "/Users/shane/Projects/bevy_ecs_tiled/assets/worlds/orthogonal.world",
-        "/Users/shane/Projects/nano-9/tiny-dungeon/over-world2.world"
+        "/Users/shane/Projects/nano-9/tiny-dungeon/assets/over-world2.world"
     ],
     "map.height": 8,
     "map.lastUsedFormat": "tmx",
