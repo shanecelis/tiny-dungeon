@@ -1,0 +1,19 @@
+[package]
+name = "tiny-dungeon"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy_mod_scripting = { version = "0.11", features = ["lua54", "core_functions"] }
+bevy = "0.15.3"
+nano9 = { version = "0.1.0", path = "..", features = ["inspector"] }
+bevy_minibuffer = "0.3.0"
+bevy_minibuffer_inspector = { version = "0.1.0", optional = false }
+toml = "0.8.19"
+bevy_old_tv_shader = { version = "0.2.0", path = "../../bevy_old_tv_shader" }
+
+[patch.crates-io]
+bevy_mod_scripting = { path = "../../bevy_mod_scripting" }
+bevy_minibuffer = { path = "../../bevy_minibuffer" }
+bevy_ecs_tilemap = { path = "../../bevy_ecs_tilemap" }
+bevy_ecs_tiled = { path = "../../bevy_ecs_tiled" }
