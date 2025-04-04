@@ -1,5 +1,3 @@
--- main.lua
---
 -- # Tiny Dungeon Game
 --
 -- By Ryland and Shane
@@ -8,23 +6,27 @@
 --
 -- # BUGS
 
--- time
+-- time, frame count
 t = 0
 -- location of player
 x = 64
 y = 64
+-- player speed
 speed = 1
--- facing
+-- player facing
 fx = 0
 fy = 0
 -- modal message, press button to resume
 modal = false
+-- player shape in an AABB format: { min_x, min_y, max_x, max_y }
 player_shape = { 2, -14,
                  14, -2 }
+-- player reach in an AABB format: { min_x, min_y, max_x, max_y }
 player_reach = { -2, -18,
                  18, 2 }
+-- What frame we start attacking? Initialize to something impossible.
 attack_time = -30
--- Take note of which crates were opened.
+-- Take note of which chests were opened.
 opened_chests = {}
 function _init()
     world.info("init")
@@ -70,7 +72,7 @@ function _update()
     end
     -- Check if we're stuck. Are we on top of anything without moving?
     if #raydown(x, y, 1, player_shape) > 0 then
-        -- I might be stuck.
+        -- POOH BEAR: I'm stuck.
         local directions = {
             {-1,  0 }, -- left
             { 1,  0 }, -- right
@@ -87,14 +89,15 @@ function _update()
                 j = i
             end
         end
-        -- nudge ourselves away by one pixel.
+        -- RABBIT: It all comes from eating too much!
+
+        -- Nudge ourselves away by one pixel.
         x = x - directions[j][1]
         y = y - directions[j][2]
     end
 
     local wall_dist, wall_id = min_dist(raycast(x + dx, y + dy, dx, dy, 1, player_shape))
     if wall_dist and wall_dist < speed then
-        -- world.info("will bump ".. wall_dist.." "..props(wall_id))
         world.info("will bump "..wall_id.." at dist "..wall_dist)
     else
         x = x + dx * speed
@@ -114,7 +117,6 @@ function _update()
         else
             world.info("p "..dump(p))
         end
-        -- p.k
     end
 
     -- Interact with something
@@ -156,18 +158,26 @@ function _update()
     t = t + 1
 end
 
-function fold(map, init, f)
-    for k, v in pairs(map) do
-        init = f(k, v, init)
+function _draw()
+    if modal then
+        return
     end
-    return init
-end
-
-function ifold(map, init, f)
-    for k, v in ipairs(map) do
-        init = f(k, v, init)
+    -- Clear the screen.
+    cls()
+    local s = 99 -- sprite index, character
+    if fy < 0 then
+        s = {1, -- sprite sheet
+             1  -- sprite index, back of character
+        }
     end
-    return init
+    -- Draw the character.
+    spr(s, x, y, 1, 1, fx < 0)
+    local attack_frame = t - attack_time
+    -- Are we attacking?
+    if attack_frame < 8 then
+        -- Draw the weapon
+        spr(103, x + fx * (attack_frame + 8), y + fy * (attack_frame + 8), 1, 1, false, false, atan2(fx, fy) - 0.25)
+    end
 end
 
 function min_dist(list)
@@ -196,6 +206,7 @@ function grid_align(a)
     end
 end
 
+-- Make strings out of tables for debug purposes.
 function dump(o)
     if type(o) == 'table' then
         local s = '{ '
@@ -206,27 +217,5 @@ function dump(o)
         return s .. '} '
     else
         return tostring(o)
-    end
-end
-
-function _draw()
-    if modal then
-        return
-    end
-    -- Clear the screen.
-    cls()
-    local s = 99 -- sprite index, character
-    if fy < 0 then
-        s = {1, -- sprite sheet
-             1  -- sprite index, back of character
-        }
-    end
-    -- Draw the character.
-    spr(s, x, y, 1, 1, fx < 0)
-    local attack_frame = t - attack_time
-    -- Are we attacking?
-    if attack_frame < 8 then
-        -- Draw the weapon
-        spr(103, x + fx * (attack_frame + 8), y + fy * (attack_frame + 8), 1, 1, false, false, atan2(fx, fy) - 0.25)
     end
 end
