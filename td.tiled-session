@@ -1,0 +1,209 @@
+{
+    "activeFile": "tilemap_packed.tsx",
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "/Users/Projects/nano-9/tiny-dungeon/tiny-town-tilemap.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilemaps/Beginning Fields.tmx": {
+            "scale": 0.5507,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 403.1232976212094,
+                "y": 352.27891774105683
+            }
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilemaps/Lillys house.tmx": {
+            "scale": 3.78515625,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 63.93395252837977,
+                "y": 63.93395252837978
+            }
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Animation_Campfire.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Animation_Flowers_Red.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Animation_Flowers_White.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Atlas_Buildings.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Atlas_Props.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Atlas_Rocks.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Atlas_Trees_Bushes.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Objects_Buildings.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Objects_Props.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Objects_Rocks.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Objects_Trees.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Tileset_Ground.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Tileset_RockSlope.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Tileset_RockSlope_Simple.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Tileset_Water.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilesets/Tilesets_Road.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Projects/bevy_ecs_tiled/assets/tiles/orthogonal_1.tsx": {
+            "scaleInDock": 1
+        },
+        "/Users/shane/Projects/bevy_ecs_tiled/assets/worlds/orthogonal/world_map001.tmx": {
+            "scale": 2.1838867187499997,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 255.9656575593615,
+                "y": 208.80203908241293
+            }
+        },
+        "Lillys house inside.tmx": {
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 63.75,
+                "y": 72
+            }
+        },
+        "Lillys house outside.tmx": {
+            "expandedObjectLayers": [
+                4
+            ],
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 63.75,
+                "y": 64
+            }
+        },
+        "black smith inside town.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 3.78,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 39.94708994708995,
+                "y": 24.074074074074076
+            }
+        },
+        "blank.tmx": {
+            "scale": 8.735546874999999,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 63.99141438984037,
+                "y": 63.99141438984037
+            }
+        },
+        "inside.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 8,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 78.9375,
+                "y": 79.875
+            }
+        },
+        "outside-2.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 2,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 63.75,
+                "y": 64
+            }
+        },
+        "outside.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 2.06,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 16.019417475728176,
+                "y": 16.019417475728176
+            }
+        },
+        "path to town.tmx": {
+            "scale": 3.78515625,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 63.93395252837977,
+                "y": 81.10629514963878
+            }
+        },
+        "path.tmx": {
+            "scale": 3.78,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 61.90476190476191,
+                "y": 84.3915343915344
+            }
+        },
+        "rogue-like-indoors.tsx": {
+            "scaleInDock": 1
+        },
+        "test0.tmx": {
+            "scale": 2.74,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 63.86861313868613,
+                "y": 79.74452554744526
+            }
+        },
+        "tilemap_packed.tsx": {
+            "scaleInDock": 2,
+            "scaleInEditor": 4
+        },
+        "tiny-town-tilemap.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "recentFiles": [
+        "inside.tmx",
+        "Lillys house outside.tmx",
+        "outside-2.tmx",
+        "Lillys house inside.tmx",
+        "tiny-town-tilemap.tsx",
+        "tilemap_packed.tsx",
+        "blank.tmx",
+        "/Users/shane/Projects/bevy_ecs_tiled/assets/worlds/orthogonal/world_map001.tmx",
+        "outside.tmx",
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilemaps/Lillys house.tmx",
+        "/Users/shane/Downloads/The Fan-tasy Tileset (Free)/Tiled/Tilemaps/Beginning Fields.tmx",
+        "test0.tmx"
+    ]
+}
