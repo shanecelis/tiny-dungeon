@@ -5024,11 +5024,13 @@ name = "tiny-dungeon"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "bevy_ecs_tiled",
  "bevy_minibuffer",
  "bevy_minibuffer_inspector",
  "bevy_mod_scripting",
  "bevy_old_tv_shader",
  "nano9",
+ "tiled",
  "toml 0.8.20",
 ]
 

@@ -20,6 +20,7 @@ use std::{
     path::PathBuf,
     process,
 };
+mod covers;
 
 #[derive(Resource)]
 struct InitState(Handle<Pico8State>);
@@ -38,7 +39,9 @@ fn main() -> io::Result<()> {
                 let pico8state: Handle<Pico8State> = asset_server.load("Nano9.toml");
                 commands.insert_resource(InitState(pico8state));
             },
-        );
+        )
+        .add_systems(Update, covers::add_covers)
+        ;
     app.add_systems(
         PostStartup,
         |cameras: Query<Entity, With<Camera>>, mut commands: Commands| {
@@ -63,6 +66,7 @@ fn main() -> io::Result<()> {
             .set(nano9_plugin.window_plugin()),
     )
     .add_plugins(nano9_plugin)
+    .add_plugins(nano9::raycast::RaycastPlugin)
     .add_plugins(OldTvPlugin)
     .add_plugins(MinibufferPlugins)
     .add_acts((

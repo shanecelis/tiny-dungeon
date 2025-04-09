@@ -11,6 +11,8 @@ bevy_minibuffer = "0.3.0"
 bevy_minibuffer_inspector = { version = "0.1.0", optional = false }
 toml = "0.8.19"
 bevy_old_tv_shader = { version = "0.2.0", path = "../../bevy_old_tv_shader" }
+bevy_ecs_tiled = "0.6.0"
+tiled = "0.14.0"
 
 [patch.crates-io]
 bevy_mod_scripting = { path = "../../bevy_mod_scripting" }
