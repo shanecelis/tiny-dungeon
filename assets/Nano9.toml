@@ -1,3 +1,4 @@
+name = "Tiny Dungeon"
 template = "pico8"
 code = "main.lua"
 [[sprite_sheet]] # 0

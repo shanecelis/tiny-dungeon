@@ -1,18 +1,16 @@
 use nano9::{
-    level::{self, tiled::TiledLookup},
-    pico8::{self, PropBy},
-    raycast::{Cover, Place, RaycastPlugin},
+    level::{tiled::TiledLookup},
+    raycast::{Cover, Place},
 };
 use bevy::{
-    ecs::system::SystemParam,
     math::bounding::Aabb2d,
     prelude::*,
 };
 use bevy_ecs_tiled::{
     map::components::TiledMapStorage,
-    prelude::{TiledMap, TiledMapCreated, TiledMapHandle},
+    prelude::{TiledMap, TiledMapCreated},
 };
-use tiled::{LayerType, PropertyValue, Tileset};
+use tiled::{LayerType, PropertyValue};
 
 pub(crate) fn add_covers(
     mut tiled_map_created: EventReader<TiledMapCreated>,

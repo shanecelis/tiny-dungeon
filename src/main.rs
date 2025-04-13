@@ -1,33 +1,21 @@
 use bevy::{
-    asset::{
-        io::{AssetSourceBuilder, AssetSourceId},
-        AssetPath,
-    },
     audio::AudioPlugin,
     prelude::*,
-    text::FontSmoothing,
 };
 use bevy_minibuffer::prelude::*;
-use bevy_mod_scripting::core::script::ScriptComponent;
 use bevy_old_tv_shader::prelude::*;
 
 use nano9::{config::Config, pico8::*, *};
-use std::{
-    borrow::Cow,
-    env,
-    ffi::OsStr,
-    fs, io,
-    path::PathBuf,
-    process,
-};
+use std::io;
 mod covers;
 
+#[allow(dead_code)]
 #[derive(Resource)]
 struct InitState(Handle<Pico8State>);
 
 fn main() -> io::Result<()> {
     let content = include_str!("../assets/Nano9.toml");
-    let config: Config = toml::from_str::<Config>(&content)
+    let config: Config = toml::from_str::<Config>(content)
         .map_err(|e| io::Error::new(io::ErrorKind::Other, format!("{e}")))?
         .inject_template();
 
@@ -35,13 +23,13 @@ fn main() -> io::Result<()> {
     let mut app = App::new();
         app.add_systems(
             PostStartup,
-            move |asset_server: Res<AssetServer>, mut commands: Commands, pico8: Pico8| {
+            move |asset_server: Res<AssetServer>, mut commands: Commands| {
                 let pico8state: Handle<Pico8State> = asset_server.load("Nano9.toml");
                 commands.insert_resource(InitState(pico8state));
             },
         )
-        .add_systems(Update, covers::add_covers)
-        ;
+        .add_systems(Update, covers::add_covers);
+    // Add the Old TV effect.
     app.add_systems(
         PostStartup,
         |cameras: Query<Entity, With<Camera>>, mut commands: Commands| {
@@ -67,7 +55,9 @@ fn main() -> io::Result<()> {
     )
     .add_plugins(nano9_plugin)
     .add_plugins(nano9::raycast::RaycastPlugin)
-    .add_plugins(OldTvPlugin)
+    .add_plugins(OldTvPlugin);
+
+    app
     .add_plugins(MinibufferPlugins)
     .add_acts((
         BasicActs::default(),
@@ -75,7 +65,6 @@ fn main() -> io::Result<()> {
         acts::tape::TapeActs::default(),
         nano9::minibuffer::Nano9Acts::default(),
     ));
-
     app.add_acts(bevy_minibuffer_inspector::WorldActs::default());
     app.run();
     Ok(())
